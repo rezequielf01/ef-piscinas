@@ -357,6 +357,7 @@ a:focus {
   background-image: url(../images/about-bg.png);
   background-size: cover;
   padding-top: 0;
+  overflow-x: hidden;
 }
 
 .about_section .row {
@@ -386,6 +387,10 @@ a:focus {
 .about_section .detail-box a:hover {
   background-color: transparent;
   color: #023b48;
+}
+
+.service_section{
+  overflow-x: hidden;
 }
 
 .service_section .row .col-md-4 {
@@ -445,6 +450,7 @@ a:focus {
 
 .gallery-section {
   background-color: #0dc3ff;
+  overflow-x: hidden;
 }
 
 .gallery-section .container {
@@ -499,6 +505,7 @@ a:focus {
 
 .buy_section {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .buy_section p {
