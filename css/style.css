@@ -518,6 +518,11 @@ a:focus {
   color: #023b48;
 }
 
+.buy__img{
+  width: 60%;
+}
+
+
 .client_section .pl-100 {
   padding-left: 100px;
 }
