@@ -152,7 +152,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="img-box">
+          <div class="img-box fade-in fade-in-left">
             <img src="images/logo-2.png" alt="">
           </div>
         </div>
@@ -193,7 +193,7 @@
 
                     <div class="row" style="row-gap: 50px;">
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 service-card fade-in fade-in-right">
                             <div class="img_box">
                                 <img src="images/s-1.png" alt="">
                             </div>
@@ -207,7 +207,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 service-card fade-in fade-in-right">
                             <div class="img_box">
                                 <img src="images/s-2.png" alt="">
                             </div>
@@ -221,7 +221,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 service-card fade-in fade-in-right">
                             <div class="img_box">
                                 <img src="images/s-3.png" alt="">
                             </div>
@@ -235,7 +235,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 service-card fade-in fade-in-left">
                             <div class="img_box">
                                 <img src="images/s-4.png" alt="">
                             </div>
@@ -249,7 +249,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 service-card fade-in fade-in-left">
                             <div class="img_box">
                                 <img src="images/s-5.png" alt="">
                             </div>
@@ -263,7 +263,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 service-card fade-in fade-in-left">
                             <div class="img_box">
                                 <img src="images/s-6.png" alt="">
                             </div>
@@ -337,7 +337,7 @@
         Ofrecemos envíos rápidos y seguros a cualquier rincón del país. No importa dónde te encuentres, nuestro equipo se encargará de que tu pedido llegue a ti sin complicaciones. Nos esforzamos por garantizar que cada entrega sea eficiente y puntual
       </p>
       <div class="d-flex justify-content-center">
-        <img class="buy__img" src="images/medios-de-pago.jpg" alt="">
+        <img class="buy__img fade-in fade-in-right" src="images/medios-de-pago.jpg" alt="">
       </div>
     </div>
   </section>
@@ -600,7 +600,36 @@
     });
  </script>
 
-</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  // Selecciona los elementos a observar
+  const targets = document.querySelectorAll(".img-box.fade-in, .service-card,fade-in, .buy__img.fade-in");
+
+  // Define la función que será llamada cuando el elemento entre o salga del viewport
+  const observerCallback = (entries, observer) => {
+     entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        // Añade la clase 'visible' cuando el elemento esté en el viewport
+        entry.target.classList.add("visible");
+        // Deja de observar el elemento si ya se ha visto
+        observer.unobserve(entry.target);
+        }
+     });
+  };
+
+  // Crea un Intersection Observer
+  const observer = new IntersectionObserver(observerCallback, {
+     root: null, // Usa el viewport del navegador
+     rootMargin: '0px',
+     threshold: 0.5 // Cuánto del elemento debe estar visible para activar la función
+  });
+
+  // Comienza a observar los elementos
+  targets.forEach(target => observer.observe(target));
+  });
+</script>
+
+
 </body>
 
 </html>
