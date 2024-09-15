@@ -1,0 +1,53 @@
+.services-cards-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.service-card{
+    display: grid;
+    grid-template-columns: repeat(2, 30% 70%);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.service-card img {
+    width: 75%;
+    height: 275px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    grid-area: 1 / 1 / 4 / 2;
+    padding: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background: #21d7ff;
+}
+
+.service-card h2 { 
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    font-weight: bold;
+}
+
+.service-card p { 
+    grid-area: 2 / 2 / 4 / 3;
+    width: 100%;
+    text-align: left; 
+}
+
+
