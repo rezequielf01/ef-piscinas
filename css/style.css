@@ -112,15 +112,19 @@ body {
 }
 
 .header_section .quote_btn-container a {
-  color: #434242;
+  color: #0c0c0c;
   text-transform: uppercase;
 }
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
   padding: 10px 30px;
-  color: #434242;
+  color: #0c0c0c;
   text-align: center;
   text-transform: uppercase;
+}
+
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link:hover{
+  color: #21d7ff;
 }
 
 a,

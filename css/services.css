@@ -17,6 +17,10 @@
     grid-row-gap: 0px;
 }
 
+.service-card-img{
+    position: relative;
+}
+
 .service-card img {
     width: 75%;
     height: 275px;
@@ -32,6 +36,14 @@
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
     background: #21d7ff;
+}
+
+.service-card-img span{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, white, transparent);
+    position: absolute;
+    bottom: 0;
 }
 
 .service-card h2 { 
@@ -68,6 +80,10 @@
     grid-area: 1 / 1 / 2 / 2;
 }
 
+.service-card-img span{
+    display: none;
+}
+
 .service-card h2 { 
     grid-area: 2 / 1 / 3 / 2;
     font-size: 1.2rem;
@@ -94,18 +110,18 @@
     .service-card img {
         width: 100%;
         height: 250px;
-        border-radius: 0;
         grid-area: 1 / 1 / 2 / 2;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        -ms-border-radius: 0;
-        -o-border-radius: 0;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
         background: none;
-    }
+}
     
     .service-card h2 { 
         grid-area: 2 / 1 / 3 / 2;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     
     .service-card p { 
@@ -122,6 +138,10 @@
         width: 100%;
         height: 400px;
     }
+    .service-card h2 { 
+        grid-area: 2 / 1 / 3 / 2;
+        font-size: 1.7rem;
+    }
 }
 
 @media (min-width: 1439px) {
@@ -131,5 +151,9 @@
     .service-card img {
         width: 100%;
         height: 400px;
+    }
+    .service-card h2 { 
+        grid-area: 2 / 1 / 3 / 2;
+        font-size: 2rem;
     }
 }
