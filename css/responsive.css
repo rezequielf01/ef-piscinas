@@ -3,8 +3,42 @@
     height: auto;
   }
 
+  .hero-content{
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-box1{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-box1 h1{
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .hero-box1 p{
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-box2 img{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .about_section{
+    width: 90%;
+    margin: 100px auto 0;
+  }
+
   .slider_section {
     padding: 50px 0;
+  }
+
+  .custom_heading{
+    margin: 0;
   }
 
   .quote_btn-container {
@@ -27,9 +61,24 @@
 }
 
 @media (max-width: 768px) {
+
+
   .slider_detail-box {
     text-align: center;
   }
+  
+  .hero-box1{
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  .hero-box1 h1{
+    font-size: 2rem;
+  }
+
+  .hero-box2{
+    display: none;
+  }
+
   .info_section .col-md-3 {
     text-align: center;
   }
@@ -59,12 +108,8 @@
     display: none;
   }
 
-  .slider_img-box {
-    margin: 25px 0 45px 0;
-  }
-
-  .carousel-indicators {
-    bottom: -5%;
+  .custom_heading{
+    margin: 0;
   }
 
   .col-md-6.offset-md-2 {
@@ -76,15 +121,15 @@
 }
 
 @media (max-width: 576px) {
-  .slider_img-box {
-    display: none;
+  .hero-box1 {
+    width: 95%;
   }
-  .carousel-item{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .hero-box1 h1{
+    font-size: 1.5rem;
   }
+
+
   .custom_heading{
     font-size: 1.5rem;
     font-weight: 600;
@@ -100,10 +145,19 @@
   .editorial {
     height: 35px;
   }
+
+  .about_section{
+    width: 90%;
+  }
   
   .about_section .img-box img{
     width: 100%;
   }
+
+  .about_section .detail-box{
+    width: 100%;
+  }
+
   
   .client_section .client_container {
     flex-direction: column;
@@ -145,21 +199,24 @@
 }
 
 @media (max-width: 480px) {
-  .slider_detail-box h1 {
-    font-size: 40px;
-  }
+
 }
 
 @media (max-width: 420px) {
 }
 
-@media (max-width: 360px) {
+@media (max-width: 375px) {
   .btn-box {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .slider_detail-box .btn-box .btn-1 {
+
+  .hero-box1 img{
+    width: 100px;
+  }
+
+  .hero-box1 .btn-box .btn-1 {
     margin-bottom: 10px;
     margin-right: 0;
   }
