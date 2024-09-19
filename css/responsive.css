@@ -66,6 +66,10 @@
   .slider_detail-box {
     text-align: center;
   }
+
+  .quote_btn-container {
+    padding: 25px 0;
+  }
   
   .hero-box1{
     grid-area: 1 / 1 / 2 / 3;
